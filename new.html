@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>	
+	<meta charset="UTF-8">
+	<title>Premier League</title>
+	
+	<!-- Set the page to the width of the device and set the zoon level -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<!-- <meta name="viewport" content="width = device-width, initial-scale = 1"> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+</head>
+	
+	<style>
+	body{
+		padding-top: 40px;
+	}
+	</style>
+	
+<body data-spy="scroll" data-target="#my-navbar">
+	
+	<!-- Navbar -->
+  	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+			<div class="container-fluid">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+ 
+				<a class="pull-left" href="main.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/250px-Premier_League_Logo.svg.png""></a>
+			</div> <!-- Navbar Header -->
+	</div>
+	
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+		<!-- remove active to get the this i want  -->
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="main(1).html">Home <span class="sr-only">(current)</span></a></li>
+			<li class="active"><a href="#" onclick="leagueTable()"  >LeagueTable <span class="sr-only">(current)</span></a></li>
+			<li class="dropdown">
+			<li class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Results <span class="caret"></span></a>
+				<ul class="dropdown-menu"></li>
+					<li><a href="#" onclick="lastGame()" >Last Game's Result</a></li>
+					<li><a href="#" onclick="last5Games()">Last Five Game's</a></li>
+					<li><a href="#" onclick="seasonResults()" >Result for this Season</a></li>
+				</ul>
+			</li>			
+			<li><a href="#" onclick="head2Head()" >Head to Head</a></li>
+			<li class="active"><a href="#" onclick="teamPlayers()" >Players</a></li>
+			<li class="active"><a href="#" onclick="teamUpcoming()" >Upcoming Games</a></li>
+			<li class="active"><a href="#" onclick="leagueFixtures()">League Fixtures</a></li>
+			
+			<li>
+			<a aria-expanded="false">Select your team
+			<select id = "myList" name = "teamSelect" onchange="teamRecog(this.id)"></li></a></select>
+			</li>
+			</a>	
+		</div>
+
+		<div id="sTeam" align="center">
+			<h3 id="resultText" /></h3><img id="logo" height="25" width="25" border="0" />
+		</div>
+			
+		
+		<div id="ele" align="center">
+		</div>
+			
+			<!-- <li>
+			<a aria-expanded="false">Select your team
+			<select id = "myList" name = "teamSelect" onchange="teamRecog(this.id)"></li></a></select>
+		</div>
+	
+	<div id="sTeam" align="center">
+		<h3 id="resultText" /></h3><img id="logo" height="25" width="25" border="0" />
+	</div>
+		
+	
+	<div id="ele" align="center"> </div>
+	</div> -->
+	</nav>
+</body>
+<body>
+<div class="container">
+		<section>
+			<div class="page-header" id="gallery">
+  				<h2>Gallery.<small> Check out the Awesome Gallery</small></h2>
+  			</div>
+
+  			<div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+  				<ol class="carousel-indicators">
+  					<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+  					<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+  					<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+  					<li data-target="#screenshot-carousel" data-slide-to="3"></li>
+  				</ol>
+  				<div class="carousel-inner">
+  					<div class="item active">
+  						<img src="Logo.jpg" alt="Text of the image height: 200px;">
+  						<div class="carousel-caption">
+  							<h3>Highway heading</h3>
+  							<p>This is the caption</p>
+  						</div>
+  					</div>
+  					<div class="item">
+  						<img src="Clubs.jpg" alt="Text of the image">
+  						<div class="carousel-caption">
+  							<h3>River heading</h3>
+  							<p>This is the caption</p>
+  						</div>
+  					</div>
+  					<div class="item">
+  						<img src="Ball.jpg" alt="Text of the image">
+  						<div class="carousel-caption">
+  							<h3>Street heading</h3>
+  							<p>This is the caption</p>
+  						</div>
+  					</div>
+  					<div class="item">
+  						<img src=".jpg" alt="Text of the image">
+  						<div class="carousel-caption">
+  							<h3>Painting heading</h3>
+  							<p>This is the caption</p>
+  						</div>
+  					</div>
+
+  				</div>
+				<!-- End Carousel inner -->
+  				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+  					<span class="glyphicon glyphicon-chevron-left"></span>
+  				</a>
+  				<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+  					<span class="glyphicon glyphicon-chevron-right"></span>
+  				</a>
+  			</div>
+			End Carousel
+
+		</section>
+	</div>
+	</body>
+
+
+	
+<!-- 	<style>
+			
+		body {
+		  font-size: 150%;
+		  font-family: arial, sans-serif;
+		}
+		#nttLogo{
+		  height: 100px;
+		  width: 100px;
+		}
+		#websiteTitle{
+		  font-size: 10em;
+		  vertical-align: middle;
+		  font-family: 'Pacifico', cursive;
+		  padding-left: 15px;
+		  color: #191970;
+		}
+		#websiteSlogan{
+		  font-size: 5.4em;
+		}
+		/* Carousel Styling */
+		.slide1{
+		  background-image: url('Logo.jpg');
+		  height: 200px;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: cover;
+		}
+		.slide2{
+		  background-image: url('Clubs.jpg');
+		  height: 200px;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: cover;
+		}
+		.slide3{
+		  background-image: url('Ball.jpg');
+		  height: 200px;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: cover;
+		}
+		.carousel-caption h1{
+		  font-size: 5.4em;
+		  font-family: 'Pacifico', cursive;
+		  padding-bottom: .4em;
+		}
+		.carousel-caption p{
+		  font-size: 2em;
+		}
+</style> -->
+
+
+
+<!-- <div class="container">
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+ 
+  Define how many slides to put in the carousel
+  <ol class="carousel-indicators">
+    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+    <li data-target="#theCarousel" data-slide-to="1"> </li>
+    <li data-target ="#theCarousel" data-slide-to="2"> </li>
+  </ol >
+   Define the text to place over the image
+  <div class="carousel-inner">
+    <div class="item active" >
+    <div class ="slide1"></div>
+    <div class="carousel-caption">
+      <h1>Barclays Permier League</h1>
+      <p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+    </div>
+  </div>
+  <div class="item">
+  <div class="slide2"></div>
+  <div class="carousel-caption">
+  </div>
+  </div>
+  <div class="item">
+  <div class="slide3"></div>
+  <div class="carousel-caption">
+  </div>
+  </div>
+  </div>
+  
+  Set the actions to take when the arrows are clicked
+  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"> </span>
+  </a>
+  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+  </div>
+  </div>
+		
+
+</body>	 -->
+
+</html>
